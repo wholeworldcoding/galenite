@@ -121,6 +121,12 @@
       "system" : "ds"
     },
     {
+      "title" : "Tomodachi Collection",
+      "filename" : "tcollection.nds",
+      "thumb" : "R.jpg",
+      "system" : "ds"
+    },
+    {
       "title" : "The Legend of Zelda - Link's Awakening",
       "filename" : "LinksAwakeningDX.gbc",
       "thumb" : "linksawakeningdx.jpg",
