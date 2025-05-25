@@ -258,131 +258,55 @@
     <script>
         // Define the list of games
         const sites = [
-            {
-                title: "Slope",
-                link: "/gmes/slope/index.html",
-                image: "/gmes/slope/slope-image.png"
-            },
-            {
-                title: "Bunny Graveyard",
-                link: "/gmes/bunny-graveyard/index.html",
-                image: "/gmes/bunny-graveyard/bunny-graveyard-image.png"
-            },
-            {
-                title: "Half-Life",
-                link: "/gmes/half-life/index.html",
-                image: "/gmes/half-life/half-life-image.png"
-            },
-            {
-                title: "Eaglercraft",
-                link: "/gmes/eaglercraft/index.html",
-                image: "/gmes/eaglercraft/eaglercraft-image.jpg"
-            },
-            {
-                title: "Rolly Vortex",
-                link: "/gmes/rolly-vortex/index.html",
-                image: "/gmes/rolly-vortex/rolly-vortex-image.jpg"
-            },
-            {
-                title: "Five Nights At Freddy's: Sister Location",
-                link: "/gmes/sister-location/index.html",
-                image: "/gmes/sister-location/sister-location.jpg"
-            },
-            {
-                title: "1v1.lol",
-                link: "/gmes/1v1lol/index.html",
-                image: "/gmes/1v1lol/splash.png"
-            },
-            {
-                title: "Animal Crossing",
-                link: "/gmes/animalcrossing/index.html",
-                image: "/gmes/animalcrossing/splash.jpg"
-            },
-            {
-                title: "BitLife",
-                link: "/gmes/bitlife/index.html",
-                image: "/gmes/bitlife/splash.png"
-            },
-            {
-                title: "Infinite Mario",
-                link: "/gmes/infinite-mario/index.html",
-                image: "/gmes/infinite-mario/images/logo.gif"
-            },
-            {
-                title: "Jelly Mario",
-                link: "/gmes/jelly-mario/index.html",
-                image: "/gmes/jelly-mario/logo.jpg"
-            },
-            {
-                title: "Doodle Jump",
-                link: "/gmes/doodle-jump/index.html",
-                image: "/gmes/doodle-jump/doodle.png"
-            },
-            {
-                title: "WebRetro",
-                link: "/gmes/webretro/roms.html",
-                image: "/gmes/webretro/thumb.jpg"
-            },
-            {
-                title: "Chrome Dino",
-                link: "/gmes/chrome-dino/index.html",
-                image: "/gmes/chrome-dino/icons/icon-114.png"
-            },
-            {
-                title: "Geometry Dash",
-                link: "/gmes/geodash/index.html",
-                image: "/gmes/geodash/geoscratchicon.png"
-            },
-            {
-                title: "Google Feud",
-                link: "/gmes/google-feud/index.html",
-                image: "/gmes/google-feud/splash.png"
-            },
-            {
-                title: "Google Snake Game",
-                link: "/gmes/google-snake/index.html",
-                image: "/gmes/google-snake/img/snake.png"
-            },
-            {
-                title: "Just Fall",
-                link: "/gmes/just-fall/index.html",
-                image: "/gmes/geodash/splash.jpg"
-            },
-            {
-                title: "Match Me",
-                link: "/gmes/match-me/e.html",
-                image: "/gmes/no-image.png"
-            },
-            {
-                title: "Eggy Car",
-                link: "/gmes/eggycar/index.html",
-                image: "/gmes/eggy.png"
-            },
-            {
-                title: "Five Nights At Freddy's",
-                link: "/gmes/fnaf/index.html",
-                image: "/gmes/fnaf/thumb.png"
-            },
-            {
-                title: "Run3",
-                link: "/gmes/run3/run3.html",
-                image: "/gmes/run3/thumb.png"
-            },
-            {
-                title: "Zombs Royale",
-                link: "/gmes/zombs-royale/index.html",
-                image: "/gmes/zombs-royale/zomb.png"
-            },
-            {
-                title: "Super Mario 64",
-                link: "/gmes/sm64/index.html",
-                image: "/gmes/fnaf/logo.png"
-            },
-            {
-                title: "SuperHot",
-                link: "/gmes/suberhot/index.html",
-                image: "/gmes/superhot/hot.jpg"
-            }
+            {"title": "1v1lol", "link": "/gmes/1v1lol/index.html", "image": "/gmes/1v1lol/logo.png"},
+            {"title": "Animalcrossing", "link": "/gmes/animalcrossing/index.html", "image": "/gmes/animalcrossing/splash.jpg"},
+            {"title": "Bitlife", "link": "/gmes/bitlife/index.html", "image": "/gmes/bitlife/logo.png"},
+            {"title": "Bunny Graveyard", "link": "/gmes/bunny-graveyard/index.html", "image": "/gmes/bunny-graveyard/bunny-graveyard-image.png"},
+            {"title": "Chrome Dino", "link": "/gmes/chrome-dino/index.html", "image": "/gmes/chrome-dino/icons/icon-256.png"},
+            {"title": "Doodle Jump", "link": "/gmes/doodle-jump/index.html", "image": "/gmes/doodle-jump/doodle.png"},
+            {"title": "Eaglercraft", "link": "/gmes/eaglercraft/index.html", "image": "/gmes/eaglercraft/eaglercraft-image.jpg"},
+            {"title": "Eggycar", "link": "/gmes/eggycar/index.html", "image": "/gmes/eggycar/eggy-car.png"},
+            {"title": "Fnaf", "link": "/gmes/fnaf/index.html", "image": "/gmes/fnaf/00a70bb1caf8629ba3808e1fb2be6178.png"},
+            {"title": "Geodash", "link": "/gmes/geodash/index.html", "image": "/gmes/geodash/geoscratchicon.png"},
+            {"title": "Google Feud", "link": "/gmes/google-feud/index.html", "image": "/gmes/google-feud/splash.png"},
+            {"title": "Google Snake", "link": "/gmes/google-snake/index.html", "image": "/gmes/google-snake/img/snake.png"},
+            {"title": "Half Life", "link": "/gmes/half-life/index.html", "image": "/gmes/half-life/half-life-image.png"},
+            {"title": "Infinite Mario", "link": "/gmes/infinite-mario/main.html", "image": "/gmes/infinite-mario/images/logo.gif"},
+            {"title": "Jelly Mario", "link": "/gmes/jelly-mario/index.html", "image": "/gmes/jelly-mario/logo.jpg"},
+            {"title": "Just Fall", "link": "/gmes/just-fall/index.html", "image": "/gmes/just-fall/splash.jpg"},
+            {"title": "Match Me", "link": "/gmes/match-me/e.html", "image": "/gmes/no-image"},
+            {"title": "Minecraft", "link": "/gmes/minecraft/index.html", "image": "/gmes/minecraft/logo.png"},
+            {"title": "Minecraft 18", "link": "/gmes/minecraft-18/index.html", "image": "/gmes/minecraft-18/splash.png"},
+            {"title": "Minecraft Classic", "link": "/gmes/minecraft-classic/index.html", "image": "/gmes/minecraft-classic/pack.png"},
+            {"title": "Minecraftbeta", "link": "/gmes/minecraftbeta/index.html", "image": "/gmes/minecraftbeta/bg_main.png"},
+            {"title": "Paper Io 2", "link": "/gmes/paper-io-2/index.html", "image": "/gmes/paper-io-2/images/logo.png"},
+            {"title": "Portal Flash", "link": "/gmes/portal-flash/index.html", "image": "/gmes/portal-flash/portaltheflashversion.jpg"},
+            {"title": "Retro Bowl", "link": "/gmes/retro-bowl/index.html", "image": "/gmes/retro-bowl/img/splash.png"},
+            {"title": "Rolly Vortex", "link": "/gmes/rolly-vortex/index.html", "image": "/gmes/rolly-vortex/rolly-vortex-image.jpg"},
+            {"title": "Ruffle", "link": "/gmes/ruffle/index.html", "image": "/gmes/ruffle/splash.png"},
+            {"title": "Run", "link": "/gmes/run/index.html", "image": "/gmes/run/run.png"},
+            {"title": "Run2", "link": "/gmes/run2/index.html", "image": "/gmes/run2/run-2-logo.jpg"},
+            {"title": "Run3", "link": "/gmes/run3/run3.html", "image": "/gmes/run3/thumb.png"},
+            {"title": "Sandboxels", "link": "/gmes/sandboxels/index.html", "image": "/gmes/sandboxels/sandboxels.jpg"},
+            {"title": "Sister Location", "link": "/gmes/sister-location/index.html", "image": "/gmes/sister-location/sister-location.jpg"},
+            {"title": "Slitherio", "link": "/gmes/slitherio/slitherio.html", "image": "/gmes/slitherio/splash.jpeg"},
+            {"title": "Slope", "link": "/gmes/slope/index.html", "image": "/gmes/slope/slope-image.png"},
+            {"title": "SM64", "link": "/gmes/sm64/index.html", "image": "/gmes/sm64/logo.png"},
+            {"title": "Smashkarts", "link": "/gmes/smashkarts/index.html", "image": "/gmes/smashkarts/images/smashkarts.png"},
+            {"title": "Subway Surfers", "link": "/gmes/subway-surfers/index.html", "image": "/gmes/subway-surfers/img/splash.jpg"},
+            {"title": "Superhot", "link": "/gmes/superhot/index.html", "image": "/gmes/superhot/hot.jpg"},
+            {"title": "Unity", "link": "/gmes/unity/index.html", "image": "/gmes/no-image"},
+            {"title": "Vex2", "link": "/gmes/vex2/vex2.html", "image": "/gmes/vex2/splash.jpeg"},
+            {"title": "Vex3", "link": "/gmes/vex3/index.html", "image": "/gmes/vex3/vex3.png"},
+            {"title": "Vex4", "link": "/gmes/vex4/index.html", "image": "/gmes/vex4/vex4.png"},
+            {"title": "Vex5", "link": "/gmes/vex5/index.html", "image": "/gmes/vex5/vex.jpeg"},
+            {"title": "Vex6", "link": "/gmes/vex6/index.html", "image": "/gmes/vex6/assets/images/logo.png"},
+            {"title": "Vex7", "link": "/gmes/vex7/index.html", "image": "/gmes/vex7/assets/images/logo.png"},
+            {"title": "Vex8", "link": "/gmes/vex8/index.html", "image": "/gmes/vex8/assets/images/logo.png"},
+            {"title": "Webretro", "link": "/gmes/webretro/index.html", "image": "/gmes/webretro/thumb.jpg"},
+            {"title": "Wolf2d", "link": "/gmes/wolf2d/index.html", "image": "/gmes/wolf2d/icons/[icon-256].png"},
+            {"title": "Wolf3d", "link": "/gmes/wolf3d/index.html", "image": "/gmes/wolf3d/art/wolf3d.png"},
+            {"title": "Zombs Royale", "link": "/gmes/zombs-royale/index.html", "image": "/gmes/zombs-royale/zomb.png"}
         ];
 
         // Get the search query from the URL
