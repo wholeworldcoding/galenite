@@ -1,1 +1,159 @@
-<!DOCTYPE html><html><head><script>const PREFIX = "Balatro_vanilla_";const originalOpen = indexedDB.open;const originalDeleteDatabase = indexedDB.deleteDatabase;indexedDB.open = function(name, version) {const prefixedName = PREFIX + name;return version !== undefined?originalOpen.call(this, prefixedName, version):originalOpen.call(this, prefixedName);};indexedDB.deleteDatabase = function(name) {const prefixedName = PREFIX + name;return originalDeleteDatabase.call(this, prefixedName);};</script><script src="love.min.js"></script><title>Love.js</title><style>#canvas {position:absolute;top: 0;left: 0;width: 100vw;height: 100vh;}body {width: 100vw;height: 100vh;margin: 0px;}</style></head><body><canvas id="canvas"></canvas><script src="https://github.com/wholeworldcoding/galenite/releases/download/ignore/module.js"></script><script>(async()=>{const d=await getSource();Module={INITIAL_MEMORY:2**28,canvas:canvas,printErr:console.error,arguments:["game.love"]};Module.preRun = [function(){Module.addRunDependency("fp game.love");var ptr = Module.getMemory(d.length);Module['HEAPU8'].set(d, ptr);Module.FS_createDataFile('/', "game.love", d, true, true, true);Module.removeRunDependency("fp game.love")}];Love(Module)})()</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+const PREFIX = "Balatro_vanilla_";
+
+const originalOpen = indexedDB.open;
+const originalDeleteDatabase = indexedDB.deleteDatabase;
+
+indexedDB.open = function(name, version) {
+    const prefixedName = PREFIX + name;
+    return version !== undefined
+        ? originalOpen.call(this, prefixedName, version)
+        : originalOpen.call(this, prefixedName);
+};
+
+indexedDB.deleteDatabase = function(name) {
+    return originalDeleteDatabase.call(this, PREFIX + name);
+};
+</script>
+
+<script src="love.min.js"></script>
+
+<title>Love.js</title>
+
+<style>
+html, body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #111;
+    font-family: system-ui, sans-serif;
+}
+
+#canvas {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#loading {
+    position: fixed;
+    inset: 0;
+    background: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity .5s ease;
+}
+
+#loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.spinner {
+    width: 48px;
+    height: 48px;
+    margin: 24px 0;
+    border: 4px solid #444;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin .9s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+small {
+    margin-top: 16px;
+    max-width: 420px;
+    text-align: center;
+    color: #aaa;
+    line-height: 1.4;
+}
+</style>
+</head>
+
+<body>
+
+<div id="loading">
+    <h1><i>web</i>alatro</h1>
+
+    <div class="spinner"></div>
+
+    <p>Loading...</p>
+
+    <small>
+        Please wait while the game engine loads. The first launch may take a little longer,
+        but future launches should be faster thanks to browser caching. We do not condone piracy,
+        and this program is provided solely for educational purposes (specifically, running complex
+        games in static html/css/js). Credit to W0W53R. Adapted by Octo of wholeworldcoding.
+    </small>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<script src="https://github.com/wholeworldcoding/galenite/releases/download/ignore/module.js"></script>
+
+<script>
+(async () => {
+    const d = await getSource();
+
+    Module = {
+        INITIAL_MEMORY: 2**28,
+        canvas: canvas,
+        printErr: console.error,
+        arguments: ["game.love"]
+    };
+
+    Module.preRun = [function () {
+        Module.addRunDependency("fp game.love");
+
+        var ptr = Module.getMemory(d.length);
+        Module.HEAPU8.set(d, ptr);
+
+        Module.FS_createDataFile(
+            "/",
+            "game.love",
+            d,
+            true,
+            true,
+            true
+        );
+
+        Module.removeRunDependency("fp game.love");
+    }];
+
+    Love(Module);
+
+    // Fade out splash screen after the game has started.
+    requestAnimationFrame(() => {
+        const loading = document.getElementById("loading");
+        loading.classList.add("hidden");
+        setTimeout(() => loading.remove(), 600);
+    });
+
+})();
+</script>
+
+</body>
+</html>
